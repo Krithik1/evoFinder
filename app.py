@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request
 import requests
-import folium
-import os
 import json
 
 app = Flask(__name__)
@@ -18,7 +16,7 @@ model_colors = {
     "Prius": "green",
     "Prius C": "red",
     "Corolla": "orange",
-    "Kia Niro EV": "purple",
+    "Kia Niro EV": "violet",
     "Evolve eBike": "black"
 }
 
@@ -90,4 +88,4 @@ def map_view():
                            model_options=["All"] + list(model_colors.keys()))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
